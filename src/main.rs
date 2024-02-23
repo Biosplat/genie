@@ -19,6 +19,10 @@ async fn main() {
     axum::serve(listener, app).await.unwrap();
 }
 
+async fn new_function_test1() {
+    println!("this is a cool program yay!");
+}
+
 async fn index() -> Html<String> {
     Html(
         std::fs::read_to_string("frontend/index.html")
