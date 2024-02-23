@@ -26,7 +26,6 @@ async fn index() -> Html<String> {
     )
 }
 
-
 async fn bootstrap_css() -> String {
     std::fs::read_to_string("frontend/bootstrap/css/bootstrap.css")
     .expect("no index.html exists")
@@ -35,6 +34,10 @@ async fn bootstrap_css() -> String {
 async fn bootstrap_js() -> String {
     std::fs::read_to_string("frontend/bootstrap/js/bootstrap.js")
     .expect("no index.html exists")
+}
+
+async fn test2() {
+    println!("I am the world");
 }
 
 async fn historical_data(symbol: &str) -> reqwest::Result<Vec<HistoricalData>> {
